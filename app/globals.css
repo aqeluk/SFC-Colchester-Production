@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '~react-toastify/dist/ReactToastify.min.css';
+
+@layer components {
+  .scrollbar::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f7f4ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #e0cbcb;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+  }
+}
+
+.shadow-outline {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.custom-autocomplete-container {
+  position: relative;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.custom-autocomplete-list {
+  max-height: 300px; /* Adjust height as needed */
+  overflow-y: auto; /* Enables vertical scrolling */
+  background-color: white; /* Background color */
+  border: 1px solid #e5e7eb; /* Border color similar to NextUI */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Subtle shadow */
+  margin-top: 4px; /* Space between input and list */
+}
+
+.custom-autocomplete-suggestion {
+  padding: 8px 12px; /* Padding inside each suggestion */
+  font-size: 16px; /* Font size */
+  color: #333; /* Text color */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.custom-autocomplete-suggestion:hover {
+  background-color: #f3f4f6; /* Background color on hover */
+}
